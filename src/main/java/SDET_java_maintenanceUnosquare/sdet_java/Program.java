@@ -12,7 +12,7 @@ public class Program {
 
 	public WebDriver SetUp() 
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\luis.osuna\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://people.unosquare.com/");
@@ -37,9 +37,9 @@ public class Program {
 		
 	}
 	
-	By ThreeDotMenu = By.cssSelector("needs maintenance");
-	By AboutUS = By.xpath("needs maintenance");
-	By Personal = By.cssSelector("needs maintenance");
+	By ThreeDotMenu = By.cssSelector("div.navbar-toggler");
+	By AboutUS = By.xpath("//a[contains(text(),'About us')]");
+	By Personal = By.cssSelector("div[onclick^='openAbout(0)']");
 
 	public static void main(String[] args) {
 		
